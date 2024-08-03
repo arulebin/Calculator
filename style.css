@@ -1,0 +1,76 @@
+*{
+    margin:0;
+    padding: 0;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+.main{
+    max-width:250px;
+    width:100%;
+    background-color: black;
+    height: 60vh;
+    border-radius: 15px;
+    padding:10px;
+}
+#screen{
+    max-width: 250px;
+    display:grid;
+    grid-template-rows: repeat(2,1fr);
+	height: 4rem;
+	background: #3B3B3B;
+	border-radius: .725rem;
+    padding: .5rem;
+    box-shadow: inset 2px 3px 5px 0px rgba(0,0,0,0.7);
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+#screen output{
+    text-align: right;
+}
+output.user-input{
+    font-size: 1.25rem;
+    font-weight:normal;
+    color: #adb5bd;
+}
+output.result{
+    font-size: 2.25rem;
+}
+#allButtons{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    place-items: center;
+    align-items: end;
+    gap:5px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+}
+.buttons:hover{
+    transform: scale(1.05);
+}
+#allButtons .equal{
+    background-color: orange;
+}
+#allButtons .opp{
+    background-color: aquamarine;
+    color: black;
+}
+#allButtons #clear{
+    background-color: cadetblue;
+}
