@@ -52,7 +52,14 @@ function handleInput(key) {
         userInput.textContent += key;
     }
 }
-
+function adjustFontSize() {
+    const totalLength = userInput.textContent.length + result.textContent.length;
+    if (totalLength > 20) {
+        document.querySelector("#screen").classList.add('shrink');
+    } else {
+        document.querySelector("#screen").classList.remove('shrink');
+    }
+}
 function operate(key) {
     if (key === "=") {
         if (operators.includes(firstnum.slice(-1))) {
@@ -86,6 +93,7 @@ function operate(key) {
                     resultNum = "Error: Invalid operator";
             }
             result.textContent = resultNum;
+            adjustFontSize();
             firstnum = resultNum.toString(); 
             secondnum = "";
             count = 0;
